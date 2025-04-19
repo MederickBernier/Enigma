@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: enigma_php
+    volumes:
+      - .:/var/www
+    working_dir: /var/www
+    environment:
+      - ORM_MODE=active
+
+  nginx:
+    image: nginx:latest
+    container_name: enigma_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./public:/var/www/public
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
