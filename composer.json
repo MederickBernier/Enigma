@@ -1,0 +1,22 @@
+{
+    "name": "mederickbernier/enigma",
+    "authors": [
+        {
+            "name": "Mederick Bernier",
+            "email": "mederick.bernier@hotmail.ca"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "App\\":"src/",
+            "Enigma\\Core\\": "Core/"
+        }
+    },
+    "require": {
+        "slim/slim": "^4.14",
+        "slim/psr7": "^1.7",
+        "php-di/php-di": "^7.0",
+        "vlucas/phpdotenv": "^5.6",
+        "twig/twig": "^3.20"
+    }
+}
